@@ -1,12 +1,13 @@
 import React from 'react';
-import './App.css';
+import Display from './display';
+import ButtonPanel from './button-panel';
+import '../styles/App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Calculator</h1>
-      </header>
+      <Display />
+      <ButtonPanel />
     </div>
   );
 }
