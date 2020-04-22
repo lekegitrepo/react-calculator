@@ -33,6 +33,6 @@ const ButtonPanel = () => (
       <Button name='=' className='col-md-3' />
     </div>
   </div>
-)
+);
 
 export default ButtonPanel;
