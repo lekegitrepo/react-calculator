@@ -1,4 +1,4 @@
-/*eslint-disable jsx-quotes*/
+/* eslint-disable jsx-quotes */
 import React from 'react';
 import Button from './button';
 
