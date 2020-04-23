@@ -5,33 +5,33 @@ import Button from './button';
 const ButtonPanel = () => (
   <div>
     <div className='row'>
-      <Button name='AC' className='col-md-3' />
-      <Button name='+/-' className='col-md-3' />
-      <Button name='%' className='col-md-3' />
-      <Button name='/' className='col-md-3' />
+      <Button name='AC' btnColor='btn btn-medium' />
+      <Button name='+/-' btnColor='btn btn-medium' />
+      <Button name='%' btnColor='btn btn-medium' />
+      <Button name='/' btnColor='btn btn-medium' />
     </div>
     <div className='row'>
-      <Button name='7' className='col-md-3' />
-      <Button name='8' className='col-md-3' />
-      <Button name='9' className='col-md-3' />
-      <Button name='X' className='col-md-3' />
+      <Button name='7' btnColor='btn btn-medium' />
+      <Button name='8' btnColor='btn btn-medium' />
+      <Button name='9' btnColor='btn btn-medium' />
+      <Button name='X' btnColor='btn btn-medium' />
     </div>
     <div className='row'>
-      <Button name='4' className='col-md-3' />
-      <Button name='5' className='col-md-3' />
-      <Button name='6' className='col-md-3' />
-      <Button name='-' className='col-md-3' />
+      <Button name='4' btnColor='btn btn-medium' />
+      <Button name='5' btnColor='btn btn-medium' />
+      <Button name='6' btnColor='btn btn-medium' />
+      <Button name='-' btnColor='btn btn-medium' />
     </div>
     <div className='row'>
-      <Button name='1' className='col-md-3' />
-      <Button name='2' className='col-md-3' />
-      <Button name='3' className='col-md-3' />
-      <Button name='+' className='col-md-3' />
+      <Button name='1' btnColor='btn btn-medium' />
+      <Button name='2' btnColor='btn btn-medium' />
+      <Button name='3' btnColor='btn btn-medium' />
+      <Button name='+' btnColor='btn btn-medium' />
     </div>
     <div className='row'>
-      <Button name='0' className='col-md-6' />
-      <Button name='.' className='col-md-3' />
-      <Button name='=' className='col-md-3' />
+      <Button name='0' btnColor='btn btn-large' />
+      <Button name='.' btnColor='btn btn-medium' />
+      <Button name='=' btnColor='btn btn-medium' />
     </div>
   </div>
 );

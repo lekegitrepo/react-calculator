@@ -2,8 +2,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = ({ name }) => (
-  <button type="button">
+const Button = ({ name, btnColor }) => (
+  <button type="button" className={ btnColor } >
     { name }
   </button>
 );
