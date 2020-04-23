@@ -7,9 +7,11 @@ import '../styles/App.css';
 
 function App() {
   return (
-    <div className='App' id='app-id'>
-      <Display result='' />
-      <ButtonPanel />
+    <div className='container'>
+      <div className='App' id='app-id'>
+        <Display result='' />
+        <ButtonPanel />
+      </div>
     </div>
   );
 }
