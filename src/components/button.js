@@ -1,4 +1,5 @@
-/* eslint-disable react/require-default-props  brace-style */
+/* eslint-disable react/require-default-props */
+/* eslint-disable brace-style */
 /* eslint-disable object-curly-newline */
 /* eslint-disable react/jsx-curly-spacing */
 /* eslint-disable react/require-default-props */
