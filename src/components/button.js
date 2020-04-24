@@ -2,21 +2,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = ({ name, btnColor, color, wide }) => {
+const Button = ({ name, btn, color, wide }) =>
+{
   const style = {
     width: wide ? '50%' : '25%',
     backgroundColor: color,
   };
   return (
-    <button type="button" className={ btnColor } style={style} >
+    <button type="button" className={ btn } style={ style }>
       { name }
     </button>
-  )
+  );
 };
 
-Button.propTypes = { 
+Button.propTypes = {
   name: PropTypes.string.isRequired,
-  wide: PropTypes.bool
+  wide: PropTypes.bool,
+  color: PropTypes.string,
 };
 
 Button.defaultProps = {
