@@ -5,11 +5,27 @@
   width: 700px;
 }
 
+.display {
+  background-color: grey;
+  color: #fff;
+  direction: rtl;
+  display: flex;
+  flex-direction: row;
+  font-size: 70px;
+  font-weight: bold;
+  height: 100px;
+  padding: 8px;
+}
+
+.btn-group {
+  height: 100px;
+}
+
 .btn {
   background-color: orange;
   font-size: 35px;
   font-weight: bold;
-  height: 100px;
+  height: 100%;
   text-align: center;
 }
 

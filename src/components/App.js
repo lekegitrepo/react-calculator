@@ -9,8 +9,8 @@ function App() {
   return (
     <div className='container'>
       <div className='App' id='app-id'>
-        <Display result='' />
-        <ButtonPanel />
+        <Display result='0' display='display' />
+        <ButtonPanel className='button-panel' />
       </div>
     </div>
   );
