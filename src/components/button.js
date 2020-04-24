@@ -1,6 +1,6 @@
 /* eslint-disable react/require-default-props  brace-style */
-/* eslint-disable object-curly-newline react/prop-types */
-/* eslint-disable react/jsx-curly-spacing */
+/* eslint-disable object-curly-newline */
+/* eslint-disable react/jsx-curly-spacing react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 
