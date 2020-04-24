@@ -1,7 +1,10 @@
-.App {
+.App, .display, .button-panel {
   display: flex;
+}
+
+.App {
   flex-direction: column;
-  margin: auto;
+  margin: 20px auto;
   width: 700px;
 }
 
@@ -9,7 +12,6 @@
   background-color: grey;
   color: #fff;
   direction: rtl;
-  display: flex;
   flex-direction: row;
   font-size: 70px;
   font-weight: bold;
@@ -22,17 +24,17 @@
 }
 
 .btn {
-  background-color: orange;
-  font-size: 35px;
+  border: 1px solid;
+  font-size: 40px;
   font-weight: bold;
   height: 100%;
   text-align: center;
 }
 
-.btn-medium {
+/*.btn-medium {
   width: 25%;
 }
 
 .btn-large {
   width: 50%;
-}
+}*/
