@@ -21,6 +21,4 @@ const operate = (numberOne, numberTwo, operation) => {
   }
 }
 
-console.log(operate(3, 4, '+'));
-
 export default operate;

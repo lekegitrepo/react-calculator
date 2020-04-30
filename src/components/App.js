@@ -3,6 +3,7 @@
 import React from 'react';
 import Display from './display';
 import ButtonPanel from './button-panel';
+import calculate from '../logic/calculate';
 import '../styles/App.css';
 
 function App() {

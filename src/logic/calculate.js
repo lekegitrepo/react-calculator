@@ -42,7 +42,4 @@ const calculate = (calculator, buttonSymbol) => {
   }
 }
 
-const calc = calculate({total: '3', next: '6', operation: '÷'}, '=');
-console.log(calc)
-
 export default calculate;
