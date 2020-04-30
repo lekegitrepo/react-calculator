@@ -26,6 +26,12 @@ const calculate = (calculator, buttonSymbol) => {
   if (total && buttonSymbol === '+/-') {
     return { total: total * -1 };
   }
+
+  if (buttonSymbol === '=' && next === '0' && operation === '÷') {
+    return {
+      error: "Error: You can't divide by 0",
+    };
+  }
 }
 
 const calc = calculate({total: '3', next: '.', operation: '+'}, '.');
