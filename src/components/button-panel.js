@@ -8,7 +8,7 @@ const ButtonPanel = () => (
       <Button name='AC' btn='btn' color='grey' />
       <Button name='+/-' btn='btn' color='grey' />
       <Button name='%' btn='btn' color='grey' />
-      <Button name='/' btn='btn' />
+      <Button name='÷' btn='btn' />
     </div>
     <div className='row btn-group'>
       <Button name='7' btn='btn' color='grey' />
