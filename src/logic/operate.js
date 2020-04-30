@@ -1,3 +1,5 @@
+/* eslint-disable import/extensions */
+
 import Big from 'big.js';
 
 const operate = (numberOne, numberTwo, operation) => {
@@ -19,6 +21,6 @@ const operate = (numberOne, numberTwo, operation) => {
     default:
       return 0;
   }
-}
+};
 
 export default operate;
