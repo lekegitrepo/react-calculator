@@ -32,9 +32,17 @@ const calculate = (calculator, buttonSymbol) => {
       error: "Error: You can't divide by 0",
     };
   }
+
+  if (buttonSymbol === '=' && total && next && operation) {
+    return {
+      total: operate(total, next, operation),
+      next: null,
+      operation: null,
+    };
+  }
 }
 
-const calc = calculate({total: '3', next: '.', operation: '+'}, '.');
+const calc = calculate({total: '3', next: '6', operation: '÷'}, '=');
 console.log(calc)
 
 export default calculate;
