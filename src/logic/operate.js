@@ -23,6 +23,4 @@ const operate = (numberOne, numberTwo, operation) => {
   }
 };
 
-console.log(operate(0, 80, '%'))
-
 export default operate;

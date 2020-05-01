@@ -51,6 +51,4 @@ const calculate = (calculator, buttonSymbol) => {
   }
 };
 
-console.log(calculate({total: 3, next: 5, operation: '+'}, '%'))
-
 export default calculate;
