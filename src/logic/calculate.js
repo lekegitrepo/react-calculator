@@ -30,6 +30,12 @@ const calculate = (calculator, buttonSymbol) => {
     return { total: total * -1 };
   }
 
+  if (buttonSymbol === '%') {
+    if (next) {
+      return { total, next: (operate(0, next, buttonSymbol)), operation };
+    }
+  }
+
   if (buttonSymbol === '=' && next === '0' && operation === '÷') {
     return {
       error: "Error: You can't divide by 0",
@@ -44,5 +50,7 @@ const calculate = (calculator, buttonSymbol) => {
     };
   }
 };
+
+console.log(calculate({total: 3, next: 5, operation: '+'}, '%'))
 
 export default calculate;

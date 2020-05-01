@@ -14,7 +14,7 @@ const operate = (numberOne, numberTwo, operation) => {
     case '+':
       return operandOne.plus(operandTwo).toString();
     case '%':
-      return operandOne.mod(operandTwo).toString();
+      return operandTwo.div('100').toString();
     case '÷':
       if (operandTwo === 0) return 0;
       return operandOne.div(operandTwo).toString();
@@ -22,5 +22,7 @@ const operate = (numberOne, numberTwo, operation) => {
       return 0;
   }
 };
+
+console.log(operate(0, 80, '%'))
 
 export default operate;
