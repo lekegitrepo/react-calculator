@@ -4,7 +4,6 @@ import operate from './operate';
 
 const calculate = (calculator, buttonSymbol) => {
   const { total, next, operation } = calculator;
-
   const symbols = {
     '=': '=',
     '+/-': '+/-',
@@ -16,60 +15,141 @@ const calculate = (calculator, buttonSymbol) => {
     '.': '.',
     '÷': '÷',
   };
-  const operators = symbols[buttonSymbol];
+  const operator = symbols[buttonSymbol];
 
-  if (operators) {
-    if (buttonSymbol === 'AC') {
-      return { total: null, next: null, operation: null };
-    }
-
-    if (buttonSymbol === '.') {
-      if (next) {
-        if (next.includes('.')) return {};
-        return { total, next: `${next}.`, operation };
-      }
-
-      if (total) {
-        if (total.includes('.')) return {};
-        return { total: `${total}.`, next, operation };
-      }
-      return { total: '0.', next, operation };
-    }
-
-    if (next && buttonSymbol === '+/-') {
-      return { next: next * -1 };
-    }
-
-    if (total && buttonSymbol === '+/-') {
-      return { total: total * -1 };
-    }
-
-    if (buttonSymbol === '%' && next !== null) {
-      if (next  && !isNaN(next)) {
-        return { total, next: (operate(0, next, buttonSymbol)), operation };
-      }
-    }
-
-    if (buttonSymbol === '=' && next === '0' && operation === '÷') {
+  if (operator) {
+    if (operator === 'AC') {
       return {
-        error: "Error: You can't divide by 0",
+        total: null,
+        next: null,
+        operation: null,
       };
     }
 
-    if (buttonSymbol === '=' && total && next && operation) {
+    if (operator === '.') {
+      if (next && next.includes(operator)) {
+        return {};
+      }
+      if (next) {
+        return {
+          ...calculator,
+          next: next + operator,
+        };
+      }
+      if (total && total.includes(operator)) {
+        return {};
+      }
+      if (total) {
+        return {
+          ...calculator,
+          total: total + operator,
+        };
+      }
+      if (operation) {
+        return {
+          ...calculator,
+          next: next + operator,
+        };
+      }
+      return {
+        ...calculator,
+        total: `0${operator}`,
+      };
+    }
+
+    if (operator === '=') {
+      if (!next || !operation) {
+        return {};
+      }
+      if (next === '0' || total === '0') {
+        return {};
+      }
       return {
         total: operate(total, next, operation),
         next: null,
         operation: null,
       };
     }
+
+    if (operator === '%' && next !== null) {
+      if (next  && !isNaN(next)) {
+        return { total: (operate(0, next, operator)), next: null, operation: null };
+      }
+
+      if (operation && next) {
+        return {
+          total: operate(total, next, operation).toString(),
+          next: null,
+          operation: null,
+        };
+      }
+
+      if (next) {
+        return {
+          ...calculator,
+          next: (next / 100).toString(),
+        };
+      }
+      return {};
+    }
+
+    if (operator === '+/-') {
+      if (next) {
+        return {
+          ...calculator,
+          next: operate(-1, next, 'X'),
+        };
+      }
+      if (total) {
+        return {
+          ...calculator,
+          total: operate(-1, total, 'X'),
+        };
+      }
+      return {};
+    }
+
+    if (operation) {
+      if (!next) {
+        return {
+          ...calculator,
+          operation: operator,
+        };
+      }
+      return {
+        total: operate(total, next, operation),
+        next: null,
+        operation: operator,
+      };
+    }
+
+    if (!next) {
+      return {
+        ...calculator,
+        operation: operator,
+      };
+    }
+    return {
+      total: next,
+      next: null,
+      operation: buttonSymbol,
+    };
   }
 
-  return {
-    total: total,
-    next: buttonSymbol,
-    operation: operation,
+  if (!next) {
+    return {
+      ...calculator,
+      next: buttonSymbol,
+    };
   }
+  if (next) {
+    return {
+      ...calculator,
+      next: next + buttonSymbol,
+    };
+  }
+
+  throw Error('Error...');
 };
 
 export default calculate;
