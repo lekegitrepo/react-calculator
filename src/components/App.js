@@ -28,7 +28,7 @@ class App extends React.Component {
       <div className='container'>
         <div className='App' id='app-id'>
           <Display result='0' display='display' />
-          <ButtonPanel  clickHandle={this.handleClick} className='button-panel' />
+          <ButtonPanel  clickHandler={this.handleClick} className='button-panel' />
         </div>
       </div>
     );
