@@ -9,7 +9,7 @@ const Display = ({ result, display }) => (
   <input type="text" defaultValue={result} className={display} />
 );
 
-Display.defaultValue = { result: '0' };
+Display.defaultProps = { result: '0' };
 Display.propTypes = {
   result: PropTypes.string.isRequired,
   display: PropTypes.string,

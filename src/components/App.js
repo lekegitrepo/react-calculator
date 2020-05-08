@@ -28,22 +28,11 @@ class App extends React.Component {
       <div className='container'>
         <div className='App' id='app-id'>
           <Display result='0' display='display' />
-          <ButtonPanel className='button-panel' />
+          <ButtonPanel  clickHandle={this.handleClick} className='button-panel' />
         </div>
       </div>
     );
   }
 }
-
-/*function App() {
-  return (
-    <div className='container'>
-      <div className='App' id='app-id'>
-        <Display result='0' display='display' />
-        <ButtonPanel className='button-panel' />
-      </div>
-    </div>
-  );
-}*/
 
 export default App;
