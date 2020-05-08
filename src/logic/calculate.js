@@ -149,7 +149,7 @@ const calculate = (calculator, buttonSymbol) => {
     };
   }
 
-  throw Error('Error...');
+  throw Error('Error: incorrect input!');
 };
 
 export default calculate;
