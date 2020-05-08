@@ -6,7 +6,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Display = ({ result, display }) => (
-  <input type="text" defaultValue={result} className={display} />
+  <div className={display}>
+    {result}
+  </div>
 );
 
 Display.defaultProps = { result: '0' };

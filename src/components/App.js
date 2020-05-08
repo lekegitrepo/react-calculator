@@ -21,13 +21,16 @@ class App extends React.Component {
   }
 
   handleClick(buttonName) {
+    console.log(buttonName, ' clicked')
     this.setState(calculate(this.state, buttonName));
+    console.log(this.setState(calculate(this.state, buttonName)))
   }
   render() {
+    const { total, next } = this.state;
     return (
       <div className='container'>
         <div className='App' id='app-id'>
-          <Display result='0' display='display' />
+          <Display result={next ? next : (total ? total : '0')} display='display' />
           <ButtonPanel  clickHandler={this.handleClick} className='button-panel' />
         </div>
       </div>
