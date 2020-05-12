@@ -2,6 +2,8 @@
 /* eslint-disable jsx-quotes */
 /* eslint-disable no-tabs */
 /* eslint-disable indent */
+/* eslint-disable react/default-props-match-prop-types */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 
