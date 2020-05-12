@@ -1,4 +1,5 @@
 /* eslint-disable consistent-return */
+/* eslint-disable no-restricted-globals */
 
 import operate from './operate';
 
