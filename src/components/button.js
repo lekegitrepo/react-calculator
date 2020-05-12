@@ -9,14 +9,13 @@ import PropTypes from 'prop-types';
 const Button = ({
   name, btn, color, wide, clickHandler,
 }) => {
-
   const handleClick = () => clickHandler(name);
   const style = {
     width: wide ? '50%' : '25%',
     backgroundColor: color,
   };
   return (
-    <button type="button" className={btn} style={style} onClick={handleClick} >
+    <button type="button" className={btn} style={style} onClick={handleClick}>
       { name }
     </button>
   );

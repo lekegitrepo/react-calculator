@@ -7,10 +7,10 @@ const calculate = (calculator, buttonSymbol) => {
   const symbols = {
     '=': '=',
     '+/-': '+/-',
-    'AC': 'AC',
+    AC: 'AC',
     '+': '+',
     '-': '-',
-    'X': 'X',
+    X: 'X',
     '%': '%',
     '.': '.',
     '÷': '÷',
@@ -72,7 +72,7 @@ const calculate = (calculator, buttonSymbol) => {
     }
 
     if (operator === '%' && next !== null) {
-      if (next  && !isNaN(next)) {
+      if (next && !isNaN(next)) {
         return { total: (operate(0, next, operator)), next: null, operation: null };
       }
 
