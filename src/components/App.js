@@ -1,5 +1,6 @@
 /* eslint-disable jsx-quotes */
 /* eslint-disable no-unused-vars */
+/* eslint-disable react/no-access-state-in-setstate */
 
 import React from 'react';
 import Display from './display';
