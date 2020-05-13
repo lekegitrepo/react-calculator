@@ -6,7 +6,7 @@ const operate = (numberOne, numberTwo, operation) => {
   const operandOne = Big(numberOne);
   const operandTwo = Big(numberTwo);
 
-try {
+  try {
     switch (operation) {
       case 'X':
         return operandOne.times(operandTwo).toString();
@@ -22,7 +22,7 @@ try {
       default:
         return 0;
     }
-  }catch(err) {
+  } catch (err) {
     Error(`Error: incorrect input! ${err}`);
   }
 };
