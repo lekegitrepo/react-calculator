@@ -1,6 +1,5 @@
 /* eslint-disable jsx-quotes */
 /* eslint-disable no-unused-vars */
-/* eslint-disable react/no-access-state-in-setstate */
 
 import React from 'react';
 import Display from './display';
@@ -22,7 +21,8 @@ class App extends React.Component {
   }
 
   handleClick(buttonName) {
-    this.setState(calculate(this.state, buttonName));
+    const newState = calculate(this.state, buttonName);
+    this.setState(newState);
   }
 
   render() {
