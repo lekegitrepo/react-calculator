@@ -3,7 +3,6 @@
 /* eslint-disable object-curly-newline */
 /* eslint-disable react/jsx-curly-spacing */
 /* eslint-disable react/require-default-props */
-/* eslint-disable react/prop-types */
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -28,6 +27,7 @@ Button.propTypes = {
   wide: PropTypes.bool,
   color: PropTypes.string,
   btn: PropTypes.string,
+  clickHandler: PropTypes.func,
 };
 
 Button.defaultProps = {
