@@ -1,4 +1,3 @@
-/* eslint-disable react/require-default-props */
 /* eslint-disable brace-style */
 /* eslint-disable object-curly-newline */
 /* eslint-disable react/jsx-curly-spacing */
@@ -7,9 +6,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = ({
-  name, btn, color, wide, clickHandler,
-}) => {
+const Button = ({ name, btn, color, wide, clickHandler, }) => {
   const handleClick = () => clickHandler(name);
   const style = {
     width: wide ? '50%' : '25%',
