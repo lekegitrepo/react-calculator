@@ -6,7 +6,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = ({ name, btn, color, wide, clickHandler, }) => {
+const Button = ({ name, btn, color, wide, clickHandler }) => {
   const handleClick = () => clickHandler(name);
   const style = {
     width: wide ? '50%' : '25%',

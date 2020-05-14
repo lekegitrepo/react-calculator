@@ -3,9 +3,9 @@
 import Big from 'big.js';
 
 const operate = (numberOne, numberTwo, operation) => {
-   try {
-     const operandOne = Big(numberOne);
-     const operandTwo = Big(numberTwo);
+  try {
+    const operandOne = Big(numberOne);
+    const operandTwo = Big(numberTwo);
 
     switch (operation) {
       case 'X':

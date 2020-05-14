@@ -68,7 +68,7 @@ const calculate = (calculator, buttonSymbol) => {
             total: null,
             next: null,
             operation: null,
-          }
+          };
         }
         return {};
       }
