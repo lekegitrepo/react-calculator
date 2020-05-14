@@ -1,5 +1,3 @@
-/* eslint-disable jsx-quotes */
-
 import React from 'react';
 import Display from './display';
 import ButtonPanel from './button-panel';
@@ -27,10 +25,10 @@ class App extends React.Component {
   render() {
     const { total, next } = this.state;
     return (
-      <div className='container'>
-        <div className='App' id='app-id'>
-          <Display result={next || (total || '0')} display='display' />
-          <ButtonPanel clickHandler={this.handleClick} className='button-panel' />
+      <div className="container">
+        <div className="App" id="app-id">
+          <Display result={next || (total || "0")} display="display" />
+          <ButtonPanel clickHandler={this.handleClick} className="button-panel" />
         </div>
       </div>
     );
