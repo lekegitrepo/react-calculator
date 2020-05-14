@@ -63,6 +63,13 @@ const calculate = (calculator, buttonSymbol) => {
         return {};
       }
       if (next === '0' || total === '0') {
+        if (operation === '÷') {
+          return {
+            total: null,
+            next: null,
+            operation: null,
+          }
+        }
         return {};
       }
       return {

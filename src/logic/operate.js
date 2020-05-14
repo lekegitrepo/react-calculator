@@ -3,10 +3,10 @@
 import Big from 'big.js';
 
 const operate = (numberOne, numberTwo, operation) => {
-  const operandOne = Big(numberOne);
-  const operandTwo = Big(numberTwo);
+   try {
+     const operandOne = Big(numberOne);
+     const operandTwo = Big(numberTwo);
 
-  try {
     switch (operation) {
       case 'X':
         return operandOne.times(operandTwo).toString();
@@ -17,7 +17,7 @@ const operate = (numberOne, numberTwo, operation) => {
       case '%':
         return operandTwo.div('100').toString();
       case '÷':
-        if (operandTwo === 0) return "Error: You can't divide by 0";
+        if (operandTwo === '0') return "Error: You can't divide by 0";
         return operandOne.div(operandTwo).toString();
       default:
         return 0;
