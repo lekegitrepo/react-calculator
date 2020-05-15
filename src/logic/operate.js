@@ -17,11 +17,7 @@ const operate = (numberOne, numberTwo, operation) => {
       case '%':
         return operandTwo.div('100').toString();
       case '÷':
-       console.log('division pressed!', operandTwo.toString(), typeof(operandTwo))
-        if (operandTwo) {
-          console.log(operandTwo, 'is zero!')
-          return "Error: You can't divide by 0"
-        };
+        if (operandTwo.toString() === '0') return "Error: division by 0";
         return operandOne.div(operandTwo).toString();
       default:
         return 0;

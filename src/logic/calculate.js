@@ -65,8 +65,8 @@ const calculate = (calculator, buttonSymbol) => {
       if (next === '0' || total === '0') {
         if (operation === '÷') {
           return {
-            total: null,
-            next: operate(total, '0', operation),
+            total: operate(total, '0', operation),
+            next: null,
             operation: null,
           };
         }
